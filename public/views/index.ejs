@@ -6,8 +6,8 @@
     <script src="dist/semantic.min.js"></script>
 </head>
 <body>
-<div class="ui large top fixed hidden menu">
-  <div class="ui container">
+<div class="ui large top fixed hidden menu" id = "menu">
+  <div class="ui container" id= "inmenu" >
     <a class="active item">Home</a><a class="item">Our Mission</a><a class="item">About us</a><a class="item">Careers</a>
       <div class="right menu">
         <div class="item">
@@ -27,10 +27,15 @@
     <div class="pusher">
       <div class="ui inverted vertical masthead center aligned segment" id = "jumbotron">
         <div class="ui container">
-          <div class="ui large secondary inverted pointing menu">
-            <a class="toc item"><i class="sidebar icon"></i></a><a class="active item">Home</a><a class="item">Our Mission</a><a class="item">About CO2</a><a class="item">Contact Us</a>
+          <div class="ui large secondary pointing menu">
+            <a class="toc item"><i class="sidebar icon"></i></a>
+            <a class="active item">Home</a>
+            <a class="item">Our Mission</a>
+            <a class="item">About CO2</a>
+            <a class="item">Contact Us</a>
             <div class="right item">
-              <a class="ui inverted button">Log in</a><a class="ui inverted button">Join</a>
+              <a class="ui button">Log in</a>
+              <a class="ui button">Join</a>
             </div>
           </div>
         </div>
@@ -39,14 +44,14 @@
             KLI<b>MAT</b>
           </h1>
           <h2>
-            Real Change. Climate impact measuring.
+            We measure CO2e-emissions
           </h2>
           <div class="ui huge primary button">
-            Get Started<i class="right arrow icon"></i>
+            Join the movement<i class="right arrow icon"></i>
           </div>
         </div>
       </div>
-      <div class="ui vertical stripe segment">
+      <div class="ui vertical stripe segment" style = "background-color: #5BBD72">
         <div class="ui middle aligned stackable grid container">
           <div class="row">
             <div class="eight wide column">
@@ -66,34 +71,12 @@
               </p>
             </div>
             <div class="six wide right floated column">
-              <img class="ui large bordered rounded image" src="../../semantic/dist/themes/forest/static/images/templates/semantic-ui/wireframe/white-image.png" />
+              <img class="ui large rounded image" src="https://image.flaticon.com/icons/svg/24/24390.svg" />
             </div>
           </div>
           <div class="row">
             <div class="center aligned column">
-              <a class="ui huge button">Check Them Out</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ui vertical stripe quote segment">
-        <div class="ui equal width stackable internally celled grid">
-          <div class="center aligned row">
-            <div class="column">
-              <h3>
-                "What a Company"
-              </h3>
-              <p>
-                That is what they all say about us
-              </p>
-            </div>
-            <div class="column">
-              <h3>
-                "I shouldn't have gone with their competitor."
-              </h3>
-              <p>
-                <img class="ui avatar image" src="../../semantic/dist/themes/forest//static/images/templates/semantic-ui/avatar/nan.jpg" /><b>Nan</b>Chief Fun Officer Acme Toys
-              </p>
+              <a class="ui huge button" href = "/calculator">Try our calculator<i class="right arrow icon"></i></a>
             </div>
           </div>
         </div>
@@ -101,22 +84,72 @@
       <div class="ui vertical stripe segment">
         <div class="ui text container">
           <h3 class="ui header">
-            Breaking The Grid, Grabs Your Attention
+            How bad is your Salad? 
           </h3>
-          <p>
-            Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.
+          <p>Fill it with ingredients
           </p>
-          <a class="ui large button">Read More</a>
-          <h4 class="ui horizontal header divider">
-            <a href="homepage.html#"> Case Studies</a>
-          </h4>
-          <h3 class="ui header">
-            Did We Tell You About Our Bananas?
-          </h3>
-          <p>
-            Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.
-          </p>
-          <a class="ui large button">I'm Still Quite Interested</a>
+          <% for (var i = 0; i < 3; i++){ %>
+            <div class="ui floating dropdown labeled search icon button">
+              <i class="food icon"></i>
+              <span class="text">Select Ingredient</span>
+              <div class="menu">
+                <div class="item">Nötkött</div>
+                <div class="item">Torsk</div>
+                <div class="item">Halloumi</div>
+                <div class="item">Sallad</div>
+                <div class="item">Tomat</div>
+              </div>
+            </div>
+            <div class="ui right labeled input">
+              <input type="text" placeholder="Enter quantity">
+              <div class="ui dropdown label">
+                <div class="text">g</div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <div class="item">kg</div>
+                  <div class="item">hg</div>
+                  <div class="item">l</div>
+                  <div class="item">dl</div>
+                  <div class="item">cl</div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <br>
+          <%}%>
+          <br>
+          <a class="ui large button">Calculate</a>
+      </div>
+      <br>
+
+      <div class="ui vertical stripe quote segment" style = "background-color: #5BBD72">
+        <div class="ui equal width stackable internally celled grid">
+          <div class="center aligned row">
+            <div class="column">
+              <h3>
+                1. Measure
+              </h3>
+              <p>
+                gotta do it
+              </p>
+            </div>
+            <div class="column">
+              <h3>
+                2. Follow up
+              </h3>
+              <p>
+              Follow up follow up
+              </p>
+            </div>
+            <div class="column">
+              <h3>
+                3. Reduce
+              </h3>
+              <p>
+              Reuce it baby
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="ui inverted vertical footer segment">
@@ -127,7 +160,10 @@
                 About
               </h4>
               <div class="ui inverted link list">
-                <a class="item" href="homepage.html#"> Sitemap</a><a class="item" href="homepage.html#"> Contact Us</a><a class="item" href="homepage.html#"> Religious Ceremonies</a><a class="item" href="homepage.html#"> Gazebo Plans</a>
+                <a class="item" href="homepage.html#"> Sitemap</a>
+                <a class="item" href="homepage.html#"> Contact Us</a>
+                <a class="item" href="homepage.html#"> Sales </a>
+                <a class="item" href="homepage.html#"> Legal </a>
               </div>
             </div>
             <div class="three wide column">
@@ -135,23 +171,23 @@
                 Services
               </h4>
               <div class="ui inverted link list">
-                <a class="item" href="homepage.html#"> Banana Pre-Order</a><a class="item" href="homepage.html#"> DNA FAQ</a><a class="item" href="homepage.html#"> How To Access</a><a class="item" href="homepage.html#"> Favorite X-Men</a>
+                <a class="item" href="homepage.html#"> Small businesses</a>
+                <a class="item" href="homepage.html#"> Meal Planning</a>
+                <a class="item" href="homepage.html#"> Analytics</a>
+                <a class="item" href="homepage.html#"> More..</a>
               </div>
             </div>
             <div class="seven wide column">
               <h4 class="ui inverted header">
-                Footer Header
+                What are you waiting for?
               </h4>
-              <p>
-                Extra space for a call to action inside the footer that could help re-engage users.
-              </p>
+              <div class = "ui button">Join the movement!
+              </div>
+
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div id = "kle">
-      <h1> ASDASDA</h1>
     </div>
     <script src="../../semantic/dist/semantic.min.js"></script>
     <style type="text/css">
@@ -214,9 +250,17 @@
       .secondary.pointing.menu .toc.item {
         display: none;
       }
-
       #jumbotron{
-          background-image: url('https://images.autouncle.com/se/car_images/911bff73-2230-48b3-98bc-d886d9ce810f_dacia-duster-laureate-1-5-dci-2012-kombi-84-800-kr.jpg');
+          background-image: url('https://static.pexels.com/photos/225448/pexels-photo-225448.jpeg');
+            background-size: cover; /* or contain depending on what you want */
+            background-position: center center;
+            background-repeat: no-repeat;
+      }
+      #menu{
+        background : #2F3E46;
+      } 
+      #inmenu a{
+        color : #ffffff;
       }
       
       @media only screen and (max-width: 700px) {
@@ -266,8 +310,67 @@
           $('.ui.sidebar')
             .sidebar('attach events', '.toc.item')
           ;
+          $('.ui.dropdown').dropdown();
+
         })
       ;
+
+
+
+
+      //Calculator Script. Temporary placed here
+      function calculate(){
+        var options = ["Nötkött", "Torsk", "Sallad", "Halloumi", "Tomat"];
+        var CO2_values = [0, 20.0, 4.7, 0.53, 3.0, 1.47];
+        console.log("hej");
+
+
+        var res = 0;
+        var sum = 0;
+        var choice = 0;
+        var amounts = document.getElementsByClassName("amountField");
+        var ingredients = document.getElementsByClassName("ingredientField");
+
+        for (var i = 0; i < amounts.length; i++){
+          choice = ingredients[i].selectedIndex;
+          sum += (CO2_values[choice] * amounts[i].value);
+        }
+
+        res = amounts[0].value;
+        var percentage = Math.round(sum/(2000000/365)*100);
+        document.getElementById("CO2e").innerHTML = (sum*0.001).toPrecision(3) + " kg CO2e";
+
+        document.getElementById("Daily").innerHTML = percentage + " % of Daily Emission Budget";
+
+        document.getElementById("calc").onclick = "reload()";
+        document.getElementById("calc").innerHTML = "Again";
+
+
+        //Create cirkle chart
+        var ctx = document.getElementById("myChart");
+        console.log(ctx.height);
+
+        var myChart = new Chart(ctx, {
+          type : 'doughnut', 
+          data : {
+            datasets: [{
+              data: [percentage, 100-percentage], 
+              backgroundColor: [
+                      '#30638E',
+                      '#79b4e5'
+                      ],
+              borderColor: [
+                      '#30638E',
+                      '#79b4e5'
+                      ],
+              labels : ["asd", "ddd"]
+            }]
+          },
+          options : {responsive : false,
+            maintainAspectRatio : false}
+        });
+      }
+
     </script>
   </body>
 </html>

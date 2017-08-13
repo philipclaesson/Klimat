@@ -15,6 +15,9 @@
 
 @blue             : #3B83C0;
 @green            : #5BBD72;
-@black            : #1B1C1D;
+@gray            : #2F3E46;
 @primaryColor: @green;
-@secondaryColor: @black;
+@secondaryColor: @gray;
+@color : @green;
+@textColor : @gray;
+
