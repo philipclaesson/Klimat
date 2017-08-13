@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <style>
+    body {
+      background-color: #17d196;
+    }
+  </style>
+</head>
+<body>
+<h4>
+
+<% //console.log(queue.queue.current.context.uri) %>
+<% //console.log(searchdata.data) %>
+
+<% var m = "Spelar inte från kö." %>
+
+<% if (searchdata.data.current.context != null){
+	if(searchdata.data.current.context.uri == 'https://open.spotify.com/user/clarreman/playlist/1gAPfeso9nW4UpYblPRnXH'){
+		var m = "Spelar från kö!";
+	}} %>
+
+<p><%= m %></p>
+
+<form action="../search">
+	<input type="text" name="q" placeholder="Search..">
+</form>
+
+
+<%searchdata.data.searchresult.tracks.items.forEach(function(f){ %>
+  <li><img src = <%= f.album.images[2].url %> > <%= f.name %> by <i> <%=  f.artists[0].name %> </i> <button onclick = addTrack()> Queue </button> </li>
+<% }) %>
+
+<p>
+<a href = '../queue'>Show Queue</a>
+
+
+</body>
+</html>
+
+
+<script>
+/*
+function addTrack(trackid) {
+    {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function(){
+    	if(xmlHttp.readyState == 4 && xmlHttp.status == 200)
+    		//callback(xmlHttp.responseText)
+    		console.log("requestade via knapp");
+    }
+    console.log("request time");
+    xmlHttp.open( "GET", 'localhost:3000/api/queue/add?trackid='+trackid, true );//true=async
+    xmlHttp.send( null );
+    //return xmlHttp.responseText;
+
+	}
+}
+*/
+</script>
+
+
+<!-- låtnamn: queue.queue.items[0].track.name -->

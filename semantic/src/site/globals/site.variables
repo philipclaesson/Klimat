@@ -1,0 +1,20 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+
+//FONTS
+
+@importGoogleFonts : true;
+@googleFontName    : 'Lato';
+@googleFontSizes   : '400,700,400italic,700italic';
+@googleFontFamily  : '@{googleFontName}:@{googleFontSizes}';
+
+
+//COLORS
+
+@blue             : #3B83C0;
+@green            : #5BBD72;
+@black            : #1B1C1D;
+@primaryColor: @green;
+@secondaryColor: @black;

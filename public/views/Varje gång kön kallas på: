@@ -1,0 +1,8 @@
+Varje gång kön kallas på: 
+	kolla om current == queue[0]
+		ta bort queue[0]
+
+Risken är att om sidan inte uppdateras medan en låt spelas, så tas inte heller låten bort. 
+
+ 
+

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <style>
+    body {
+      background-color: #17d196;
+    }
+  </style>
+</head>
+<body>
+<h4>
+
+<% //console.log(queue.queue.current.context.uri) %>
+<% //console.log(queue.queue.playlistURI) %>
+
+<% var m = "Spelar inte från kö." %>
+
+<% if (queue.queue.current.context != null){
+      if(queue.queue.current.context.uri == queue.queue.playlistURI){
+        var m = "Spelar från kö!";
+        }} %>
+
+<p><%= m %></p>
+
+<b>Now playing:</b> 
+<p> <li><img src = <%= queue.queue.current.item.album.images[2].url %> > <%=queue.queue.current.item.name%> by <i> <%=  queue.queue.current.item.artists[0].name %> </i></li>
+
+<p>
+<b>Queue:</b>
+
+<%queue.queue.queue.forEach(function(f){ %>
+  <li><img src = <%= f.track.album.images[2].url %> ><%= f.track.name %> by <i> <%=  f.track.artists[0].name %> </i></li>
+
+<% }) %>
+
+
+<a href = '../search'>Sök</a>
+
+
+</body>
+</html>
+
+
+<!-- låtnamn: queue.queue.items[0].track.name -->

@@ -1,0 +1,29 @@
+{
+  "name": "klimat",
+  "version": "1.0.0",
+  "description": "Klimat - website",
+  "main": "router.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philipclaesson/Klimat.git"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  },
+  "keywords": [
+    "klimat"
+  ],
+  "author": "Philip Claesson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philipclaesson/Klimat/issues"
+  },
+  "homepage": "https://github.com/philipclaesson/Klimat#readme",
+  "dependencies": {
+    "chart.js": "^2.6.0"
+  }
+}
