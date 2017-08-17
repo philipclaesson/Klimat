@@ -23,6 +23,10 @@ app.get('/calculator', function(req, res){
   res.render('calculator');
 })
 
+app.get('/test', function(req, res){
+  res.render('test');
+})
+
 
 //Show the queue. Calls the api for a queue-object. Renders the queue-page. 
 app.get('/queue', function(req, res){

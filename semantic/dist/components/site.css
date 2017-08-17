@@ -13,7 +13,6 @@
              Page
 *******************************/
 
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
 html,
 body {
   height: 100%;
@@ -28,6 +27,9 @@ body {
   min-width: 320px;
   background: #FFFFFF;
   background-color: #5BBD72;
+  background-image: url('/images/salad.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.4285em;
@@ -202,3 +204,8 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
          Site Overrides
 *******************************/
 
+body {
+  background-image: url('/images/salad.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

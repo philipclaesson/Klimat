@@ -34,8 +34,8 @@
             <a class="item">About CO2</a>
             <a class="item">Contact Us</a>
             <div class="right item">
-              <a class="ui inverted button">Log in</a>
-              <a class="ui inverted button">Join</a>
+              <a class="ui button">Log in</a>
+              <a class="ui button">Join</a>
             </div>
           </div>
         </div>
@@ -84,12 +84,14 @@
       <div class="ui vertical stripe segment" id = "calculator">
         <div class="ui text container">
           <h3 class="ui header">
-            How bad is your Salad? 
+            Ny måltid:
+            <div class = "ui input"><input type="text" placeholder="Enter quantity">
+            </div>
           </h3>
-          <p>Fill it with ingredients
+          <p>Mata in ingredienser
           </p>
-          <% for (var i = 0; i < 3; i++){ %>
-            <div class="ui floating dropdown labeled search icon button">
+          <% for (var i = 0; i < 5; i++){ %>
+            <div class="ui floating dropdown labeled search icon button" style = "width:400px">
               <i class="food icon"></i>
               <span class="text">Select Ingredient</span>
               <div class="menu">
@@ -97,7 +99,7 @@
                 <div class="item">Krossade Tomater</div>
                 <div class="item">Lök</div>
                 <div class="item">Buljong</div>
-                <div class="item">Tomat</div>
+                <div class="item">Pasta</div>
               </div>
             </div>
             <div class="ui right labeled input">
@@ -119,8 +121,15 @@
             <br>
             <br>
           <%}%>
+          <div class="ui left labeled input">
+              <input type="text" placeholder="Antal portioner">
+                <div class="ui text label">
+                  <i class="user icon"></i>
+                </div>
+          </div>
           <br>
-          <a class="ui large button">Calculate</a>
+          <br>
+          <a class="ui large button">Beräkna</a>
       </div>
       <br>
 
@@ -199,13 +208,6 @@
     </div>
     <script src="../../semantic/dist/semantic.min.js"></script>
     <style type="text/css">
-      @font-face {
-      font-family: 'ProximaNova';
-      src: url(Proxima.otf);
-      }
-      body{
-        font: 'ProximaNova';
-      }
 
       .hidden.menu {
         display: none;
@@ -281,11 +283,12 @@
       }
 
       #calculator{
-          background-image: url(/images/salad.jpg); /*'https://static.pexels.com/photos/225448/pexels-photo-225448.jpeg'*/
+          /*background-image: url(/images/salad.jpg); /*'https://static.pexels.com/photos/225448/pexels-photo-225448.jpeg'*/
             background-size: cover; /* or contain depending on what you want */
             background-position: center center;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            background-color: #ffffff;
       }
       
       @media only screen and (max-width: 700px) {

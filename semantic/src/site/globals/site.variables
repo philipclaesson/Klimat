@@ -6,9 +6,11 @@
 //FONTS
 
 @importGoogleFonts : true;
-@googleFontName    : 'Lato';
+@googleFontName    : 'Proxima Nova';
 @googleFontSizes   : '400,700,400italic,700italic';
 @googleFontFamily  : '@{googleFontName}:@{googleFontSizes}';
+@pageFont : 'Proxima Nova'
+@headerFont : 'Proxima Nova'
 
 
 //COLORS
